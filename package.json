@@ -1,0 +1,13 @@
+{
+  "name": "s-admin",
+  "version": "1.0.1",
+  "description": "S-Admin is basic sample code for an admin page with Node.js",
+  "main": "server.js",
+  "repository": "",
+  "author": "Lukas Rossi <hello@appdimensions.com>",
+  "dependencies": {
+      "mime": "1.2.11",
+      "mysql" : "2.0.0-alpha9",
+      "crypto" : "0.0.3"
+  }
+}

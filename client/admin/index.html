@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>S-Admin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+        <style>
+            body{
+                background-color: #eee;
+            }
+            form{
+                max-width: 330px;
+                margin: 0 auto;
+                padding: 40px;
+            }
+            form h3{
+                margin-bottom: 0;
+            }
+            #invalidMsg, #errorMsg{
+                display: none;
+                color: #F90000;
+            }
+        </style>
+        <script>
+            window.onload = function(){
+                if(String(window.location).indexOf("#invalid") !== -1){
+                    $("#invalidMsg").style.display = "block";
+                }else if(String(window.location).indexOf("#error") !== -1){
+                    $("#errorMsg").style.display = "block";
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <form action="/admin/submit/" method="post" class="">
+                <h3>Access Denied</h3>
+                <p>You must be an administrator to view this page.</p>
+                <p id="invalidMsg">Invalid credentials.</p>
+                <p id="errorMsg">An error occurred, please try again.</p>
+                <input type="text" name="username" id="username" class="input-large" placeholder="Username" required="required" />
+                <input type="password" name="pw" id="pw" class="input-large" placeholder="Password" required="required" />
+                <br />
+                <input type="submit" name="submit" id="submit" class="btn btn-primary" />
+                <br /><br />
+                <p>(Your browser and IP address will be recorded for security)</p>
+            </form>
+        </div>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+    </body>
+</html>
