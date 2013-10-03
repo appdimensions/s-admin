@@ -1,6 +1,6 @@
 {
   "name": "s-admin",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "S-Admin is basic sample code for an admin page with Node.js",
   "main": "server.js",
   "repository": "",
