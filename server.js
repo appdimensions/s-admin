@@ -197,7 +197,7 @@ function loadFile(url, res){
         url = "/" + url;
     
     if(url.indexOf("/.") === -1){// Don't load hidden files
-        fs.readFile('client' + url, "utf-8", function(err, data) {//ensure all files are loaded from the client/ folder
+        fs.readFile('client' + url, function(err, data) {//ensure all files are loaded from the client/ folder
             if(!err){
                 //display static html page
                 res.writeHead(200, {"Content-Type": mime.lookup(url)});
